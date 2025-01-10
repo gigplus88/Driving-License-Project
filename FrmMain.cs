@@ -11,6 +11,18 @@ namespace DVLD
     public partial class FrmMain : Form
     {
         private string UserName;
+        public enum enApplicationTypeID
+        {
+            NewLocalDrivingLicense = 1,
+            RenewDrivingLicense = 2,
+            ReplacementforALostDL = 3,
+            ReplacementforADamagedDL = 4,
+            ReleaseDetainedDL = 5,
+            NewInternationalLicense = 6,
+            ReatkeTest = 8
+        }
+
+        public enApplicationTypeID ApplicationTypeID;
         public FrmMain()
         {
             InitializeComponent();
@@ -120,8 +132,14 @@ namespace DVLD
 
         private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            clsApplicationType localLicense = clsApplicationType.Find(1);
-            FrmNewLocalDrivingLicenseApplication frm = new FrmNewLocalDrivingLicenseApplication(localLicense.ApplicationID);
+            //clsApplicationType localLicense = clsApplicationType.Find(1);
+            FrmNewLocalDrivingLicenseApplication frm = new FrmNewLocalDrivingLicenseApplication((byte)enApplicationTypeID.NewLocalDrivingLicense);
+            frm.ShowDialog();
+        }
+
+        private void localDrivingApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLocalDrivingLicenseApplications frm = new FrmLocalDrivingLicenseApplications();
             frm.ShowDialog();
         }
     }

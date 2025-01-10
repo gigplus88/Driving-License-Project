@@ -31,19 +31,19 @@ namespace DVLD
         public void FilApplicationInfoAfterEdit(int ApplicationTypeID)
         {
             //_Application = clsApplications.Find(ApplicationTypeID);
-            _Application.Title =  txtTitle.Text;
-            _Application.Fees = Convert.ToInt32(txtFees.Text);
+            _Application.ApplicationTitle =  txtTitle.Text;
+            _Application.ApplicationFees = Convert.ToInt32(txtFees.Text);
 
             clsApplicationType.Mode = clsApplicationType.enMode.Update;
 
             if (_Application.Save())
             {
-                MessageBox.Show($"Application {_Application.ApplicationID} Updated Successfully", "Update Application Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                _ApplicationTypeID = _Application.ApplicationID;
+                MessageBox.Show($"Application {_Application.ApplicationTypeID} Updated Successfully", "Update Application Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _ApplicationTypeID = _Application.ApplicationTypeID;
             }
             else
             {
-                MessageBox.Show($"Error  to Update {_Application.ApplicationID}  ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error  to Update {_Application.ApplicationTypeID}  ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -57,9 +57,9 @@ namespace DVLD
                 {
                     return;
                 }
-                lblApplicationTypeID.Text = _Application.ApplicationID.ToString();
-                txtTitle.Text = _Application.Title;
-                txtFees.Text =_Application.Fees.ToString();
+                lblApplicationTypeID.Text = _Application.ApplicationTypeID.ToString();
+                txtTitle.Text = _Application.ApplicationTitle;
+                txtFees.Text =_Application.ApplicationFees.ToString();
 
                 FindMode = enMFindMode.AfterFill;
             }

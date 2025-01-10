@@ -73,6 +73,26 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Book {
+            get {
+                object obj = ResourceManager.GetObject("Add Book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Add_properties__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Add properties (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_User_Male {
             get {
                 object obj = ResourceManager.GetObject("Add User Male", resourceCulture);
