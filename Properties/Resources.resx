@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Eye (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eye (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="recruitment_73761001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\recruitment_73761001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,11 +142,23 @@
   <data name="Forward Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Forward Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Type" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Type.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="User_Male2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User Male2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Delete2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User Male1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Money Bag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Money Bag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="country_15615796 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\country_15615796 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -153,6 +168,9 @@
   </data>
   <data name="sign_5111686" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sign_5111686.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reminder (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reminder (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bulleted List" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bulleted List.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,6 +223,9 @@
   <data name="Save1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ID Verified" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ID Verified.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="country_15615796 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\country_15615796 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,14 +235,23 @@
   <data name="List Of Parts (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\List Of Parts (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Person" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Person.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="At sign (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\At sign (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logout Rounded (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logout Rounded (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Add Book Large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add Book Large.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Locked With Key (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Locked With Key (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="application_list" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application_list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Title" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Title.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -246,6 +276,12 @@
   </data>
   <data name="telephone_724664" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\telephone_724664.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User Male" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendar_52930251" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar_5293025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bullet List (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bullet List (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,8 +313,14 @@
   <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Add properties (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add properties (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Add Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pbName1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pbName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="recruitment_7376100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\recruitment_7376100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,8 +349,14 @@
   <data name="Smart Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Smart Card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Calendar Plus (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendar Plus (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="employee_17986056" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee_17986056.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Certificate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Certificate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Close (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,7 +367,7 @@
   <data name="User Settings (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User Settings (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add properties (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add properties (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Notes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Notes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

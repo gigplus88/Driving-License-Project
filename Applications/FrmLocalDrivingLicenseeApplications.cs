@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Test_Type;
+using DVLD_Business;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,24 +10,13 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static DVLD.FrmMain;
 
 namespace DVLD.Applications
 {
     public partial class FrmLocalDrivingLicenseApplications : Form
     {
-        public enum enApplicationTypeID
-        {
-            NewLocalDrivingLicense = 1,
-            RenewDrivingLicense = 2,
-            ReplacementforALostDL = 3,
-            ReplacementforADamagedDL = 4,
-            ReleaseDetainedDL = 5,
-            NewInternationalLicense = 6,
-            ReatkeTest = 8
-        }
-
-        public enApplicationTypeID ApplicationTypeID;
+      
         public FrmLocalDrivingLicenseApplications()
         {
             InitializeComponent();
@@ -153,6 +143,56 @@ namespace DVLD.Applications
         {
             FrmNewLocalDrivingLicenseApplication frmNewLocalDrivingLicenseApplication = new FrmNewLocalDrivingLicenseApplication((byte)enApplicationTypeID.NewLocalDrivingLicense);
             frmNewLocalDrivingLicenseApplication.ShowDialog();
+            RefreshData();
+        }
+
+        int LDLAppID;
+
+        private void cancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show($"Are you sure to  Cancel This Application", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                clsApplication.CancelApplication(LDLAppID);
+                MessageBox.Show("Application Cancelled Successfully", "Cancelled", MessageBoxButtons.OK);
+                RefreshData();
+            }
+                
+        }
+
+        private void dgvLocalDrivingLicenseApplications_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >0)
+            {
+                DataGridViewRow selectedRow = dgvLocalDrivingLicenseApplications.Rows[e.RowIndex];
+
+                LDLAppID =Convert.ToInt32(selectedRow.Cells["LocalDrivingLicenseApplicationID"].Value);
+            }
+        }
+
+        private void btnCloseManagePeople_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public void CheckIfPassVisionResult()
+        {
+            if (clsTest.LastVisionTest(LDLAppID ,(int) FrmMain.enApplicationTypeID.NewLocalDrivingLicense))
+            {
+                secheduleVisionTestToolStripMenuItem.Enabled=false;
+                secheduleWrittenTestToolStripMenuItem.Enabled = true;
+            }
+        }
+
+        private void secheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int AppID = clsLocalDrivingLicenseApplication.GetAppIDByDLAppID(LDLAppID);
+
+            FrmVisionTestAppointements frmVisionTestAppointements = new FrmVisionTestAppointements(AppID , LDLAppID);
+            frmVisionTestAppointements.FillctrlDrivingLicenseApp();
+            frmVisionTestAppointements.Show();
+            CheckIfPassVisionResult();
+            RefreshData();
+
         }
     }
 }

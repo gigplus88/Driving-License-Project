@@ -83,6 +83,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Book_Large {
+            get {
+                object obj = ResourceManager.GetObject("Add Book Large", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_properties__1_ {
             get {
                 object obj = ResourceManager.GetObject("Add properties (1)", resourceCulture);
@@ -106,6 +116,16 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap Add_User_Male__1_ {
             get {
                 object obj = ResourceManager.GetObject("Add User Male (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap application_list {
+            get {
+                object obj = ResourceManager.GetObject("application_list", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +173,49 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Calendar {
+            get {
+                object obj = ResourceManager.GetObject("Calendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_5293025 {
             get {
                 object obj = ResourceManager.GetObject("calendar_5293025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_52930251 {
+            get {
+                object obj = ResourceManager.GetObject("calendar_52930251", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Calendar_Plus__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Calendar Plus (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Certificate {
+            get {
+                object obj = ResourceManager.GetObject("Certificate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,6 +453,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Eye__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Eye (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Female {
             get {
                 object obj = ResourceManager.GetObject("Female", resourceCulture);
@@ -446,6 +516,16 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap home_5586380 {
             get {
                 object obj = ResourceManager.GetObject("home_5586380", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ID_Verified {
+            get {
+                object obj = ResourceManager.GetObject("ID Verified", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -513,6 +593,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Money_Bag {
+            get {
+                object obj = ResourceManager.GetObject("Money Bag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap New_Ticket__1_ {
             get {
                 object obj = ResourceManager.GetObject("New Ticket (1)", resourceCulture);
@@ -523,9 +613,29 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Notes {
+            get {
+                object obj = ResourceManager.GetObject("Notes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pbName {
             get {
                 object obj = ResourceManager.GetObject("pbName", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pbName1 {
+            get {
+                object obj = ResourceManager.GetObject("pbName1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,6 +656,16 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap people232 {
             get {
                 object obj = ResourceManager.GetObject("people232", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Person {
+            get {
+                object obj = ResourceManager.GetObject("Person", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -596,6 +716,16 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap Reminder__1_ {
             get {
                 object obj = ResourceManager.GetObject("Reminder (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Reminder__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("Reminder (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -693,19 +823,9 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap User_Male {
+        internal static System.Drawing.Bitmap Type {
             get {
-                object obj = ResourceManager.GetObject("User_Male", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap User_Male1 {
-            get {
-                object obj = ResourceManager.GetObject("User_Male1", resourceCulture);
+                object obj = ResourceManager.GetObject("Type", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

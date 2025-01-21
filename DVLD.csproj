@@ -79,6 +79,12 @@
     <Compile Include="Applications\FrmNewLocalDrivingLicenseApplication.Designer.cs">
       <DependentUpon>FrmNewLocalDrivingLicenseApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ctrlDrivingLicenseApplication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlDrivingLicenseApplication.Designer.cs">
+      <DependentUpon>ctrlDrivingLicenseApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test Type\FrmListTestType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,17 +92,35 @@
       <DependentUpon>FrmListTestType.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalSettings.cs" />
-    <Compile Include="Applications Types\UpdateApplicationType.cs">
+    <Compile Include="Applications Types\FrmUpdateApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications Types\UpdateApplicationType.Designer.cs">
-      <DependentUpon>UpdateApplicationType.cs</DependentUpon>
+    <Compile Include="Applications Types\FrmUpdateApplicationType.Designer.cs">
+      <DependentUpon>FrmUpdateApplicationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test Type\FrmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Type\FrmScheduleTest.Designer.cs">
+      <DependentUpon>FrmScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test Type\FrmTakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Type\FrmTakeTest.Designer.cs">
+      <DependentUpon>FrmTakeTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Test Type\FrmUpateTestType.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Test Type\FrmUpateTestType.Designer.cs">
       <DependentUpon>FrmUpateTestType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test Type\FrmVisionTestAppointements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test Type\FrmVisionTestAppointements.Designer.cs">
+      <DependentUpon>FrmVisionTestAppointements.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\FrmChangePassword.cs">
       <SubType>Form</SubType>
@@ -208,14 +232,26 @@
     <EmbeddedResource Include="Applications\FrmNewLocalDrivingLicenseApplication.resx">
       <DependentUpon>FrmNewLocalDrivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications Types\UpdateApplicationType.resx">
-      <DependentUpon>UpdateApplicationType.cs</DependentUpon>
+    <EmbeddedResource Include="Applications Types\FrmUpdateApplicationType.resx">
+      <DependentUpon>FrmUpdateApplicationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlDrivingLicenseApplication.resx">
+      <DependentUpon>ctrlDrivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test Type\FrmListTestType.resx">
       <DependentUpon>FrmListTestType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Test Type\FrmScheduleTest.resx">
+      <DependentUpon>FrmScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Type\FrmTakeTest.resx">
+      <DependentUpon>FrmTakeTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Test Type\FrmUpateTestType.resx">
       <DependentUpon>FrmUpateTestType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test Type\FrmVisionTestAppointements.resx">
+      <DependentUpon>FrmVisionTestAppointements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\FrmChangePassword.resx">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
@@ -489,6 +525,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add properties %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eye %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar Plus %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID Verified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Certificate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money Bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Type.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Book Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

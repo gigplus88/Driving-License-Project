@@ -112,5 +112,10 @@ namespace DVLD
             frm.UpdatePerson(_PersonID);
             frm.ShowDialog();
         }
+
+        private void groupBox1_Enter(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

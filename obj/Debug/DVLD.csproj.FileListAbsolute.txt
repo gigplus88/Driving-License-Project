@@ -34,3 +34,7 @@ C:\Solutions C#\DVLD\bin\Debug\DVLD_DataAccess.exe.config
 C:\Solutions C#\DVLD\obj\Debug\DVLD.csproj.Up2Date
 C:\Solutions C#\DVLD\obj\Debug\DVLD.exe
 C:\Solutions C#\DVLD\obj\Debug\DVLD.pdb
+C:\Solutions C#\DVLD\obj\Debug\DVLD.Controls.ctrlDrivingLicenseApplication.resources
+C:\Solutions C#\DVLD\obj\Debug\DVLD.Test_Type.FrmVisionTestAppointements.resources
+C:\Solutions C#\DVLD\obj\Debug\DVLD.Test_Type.FrmScheduleTest.resources
+C:\Solutions C#\DVLD\obj\Debug\DVLD.Test_Type.FrmTakeTest.resources

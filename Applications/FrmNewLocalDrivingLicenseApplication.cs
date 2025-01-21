@@ -17,6 +17,9 @@ namespace DVLD.Applications
     public partial class FrmNewLocalDrivingLicenseApplication : Form
     {
 
+        public delegate void DataBackEventHandler(object sender, int PersonID);
+        public event DataBackEventHandler DataBack;
+
         public enum enApplicationStatus
         {
             New = 1,
@@ -56,29 +59,12 @@ namespace DVLD.Applications
         enMFindMode FindMode = enMFindMode.BeforeFill;
         private void _FillBoxes(int PersonID)
         {
-            //_Application = clsApplication.FindByPersonID(PersonID);
 
             if (_Application == null)
             {
                 return;
             }
-            //if (FindMode == enMFindMode.BeforeFill)
-            //{
-            //    lblUserID.Text = _Application.UserID.ToString();
-            //    txtUserName.Text = _Application.UserName;
-            //    txtPassword.Text = _Application.Password;
-            //    txtConfirmPassword.Text = _Application.Password;
-            //    if (_Application.IsActive == 1)
-            //    {
-            //        chbIsActive.Checked = true;
-            //    }
-            //    else
-            //    {
-            //        chbIsActive.Checked = false;
-            //    }
-
-            //    FindMode = enMFindMode.AfterFill;
-            //}
+           
             else
             {
                 FillUserInfoAfterEdit(PersonID);
@@ -86,31 +72,7 @@ namespace DVLD.Applications
         }
         public void FillUserInfoAfterEdit(int PersonID)
         {
-            ///* clsUser*/
-            //_Application = clsUser.FindByPersonID(PersonID);
-            //_Application.UserName = txtUserName.Text;
-            //_Application.Password = txtPassword.Text;
-            //if (chbIsActive.Checked)
-            //{
-            //    _Application.IsActive = 1;
-            //}
-            //else
-            //{
-            //    _Application.IsActive = 0;
-            //}
-
-            //clsUser.Mode = clsUser.enMode.Update;
-
-            //if (_Application.Save())
-            //{
-            //    MessageBox.Show($"{_Application.PersonID} Updated Successfully", "Update User", MessageBoxButtons.OK);
-            //    _PersonID = _Application.PersonID;
-            //}
-            //else
-            //{
-            //    MessageBox.Show($"Error  to Update {_Application.PersonID}  ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //}
+          
 
         }
         public void UpdateUser(int PersonID)
@@ -120,27 +82,7 @@ namespace DVLD.Applications
             _FillBoxes(PersonID);
         }
 
-        //public void IsActivePerson()
-        //{
-        //    if (!clsApplication.IsPersonExist(_ApplicantPersonID))
-        //    {
-        //        clsApplication.Mode = clsApplication.enMode.AddNew;
-        //        tabControl1.SelectedTab = tpApplicationInfo;
-        //        cbLicenseClass.Focus();
-        //        return;
-        //    }
-        //    if (clsApplication.IsPersonCanBeApplicantByLicenseClasse(_ApplicantPersonID , _ApplicantPersonID))
-        //    {
-        //        clsApplication.Mode = clsApplication.enMode.AddNew;
-        //        tabControl1.SelectedTab = tpApplicationInfo;
-        //        cbLicenseClass.Focus();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Selected Person already has a Active Application  , Choose another one", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-        //    }
-        //}
+       
         public void ToNextTabPage()
         {
             clsApplication.Mode = clsApplication.enMode.AddNew;
@@ -154,7 +96,7 @@ namespace DVLD.Applications
 
             lblApplicationDate.Text = DateTime.Now.ToString();
             lblApplicationFees.Text = clsApplicationType.GetApplicationFeesByApplicationTypeID(ApplicationTypeID).ToString();
-            lblCreatedBy.Text ="user4"; //GlobalSettings.CurrentUserInfo.UserName;
+            lblCreatedBy.Text =GlobalSettings.CurrentUserInfo.UserName;
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -178,7 +120,7 @@ namespace DVLD.Applications
         }
         bool IsApplicationWithLicenseClasseCanDoing()
         {
-            if (!clsApplication.IsPersonHasApplicationByLicenseClasse(Convert.ToInt16(clsLicenseClasse.GetLicenseClassIDByClassName(cbLicenseClass.SelectedItem.ToString() ))) )
+            if (!clsApplication.IsPersonHasApplicationByLicenseClasse(Convert.ToInt16(clsLicenseClasse.GetLicenseClassIDByClassName(cbLicenseClass.SelectedItem.ToString() )) ,_ApplicantPersonID)) 
             {
                 return true;
             }
@@ -198,7 +140,7 @@ namespace DVLD.Applications
             _Application.ApplicationStatus =Convert.ToByte(enApplicationStatus.New); //New = 1 , Cancelled = 2 , Completed = =3
             _Application.LastStatusDate = DateTime.Now;
             _Application.PaidFees =clsApplicationType.GetApplicationFeesByApplicationTypeID(ApplicationTypeID);
-            _Application.CreatedByID = clsUser.GetUserIDByUserName("user4"); //GlobalSettings.CurrentUserInfo.UserName
+            _Application.CreatedByID = clsUser.GetUserIDByUserName(GlobalSettings.CurrentUserInfo.UserName); 
 
         }
         void SaveLocalDrivingLicenseApplicationInfo()
@@ -237,7 +179,9 @@ namespace DVLD.Applications
                 if (_LocalDrivingLicenseApplication.Save())
                 {
                     MessageBox.Show($"{_Application.ApplicationID} Added Successfully", "Adding Application", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     lblDLApplicationID.Text = _Application.ApplicationID.ToString();
+
                 }
                
                 //FrmManageUsers frmManageUsers = new FrmManageUsers();
