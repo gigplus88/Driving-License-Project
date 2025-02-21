@@ -31,12 +31,6 @@ namespace DVLD.Controls
         {
 
         }
-
-      
-       
-
-
-
         public int ApplicationID
         {
             get { return _ApplicationID; }
@@ -103,6 +97,11 @@ namespace DVLD.Controls
         }
 
         private void gpDLAI_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ctrlDrivingLicenseApplication_Load(object sender, EventArgs e)
         {
 
         }

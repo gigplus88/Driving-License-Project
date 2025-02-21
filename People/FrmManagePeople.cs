@@ -30,8 +30,6 @@ namespace DVLD
             {
                 e.Handled = true;
             }
-
-
         }
         void SearchPersonID(string Input)
         {

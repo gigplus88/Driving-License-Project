@@ -50,6 +50,33 @@ namespace DVLD
             }
         }
 
+        void CheckPersonImage()
+        {
+            if (_Person.ImagePath != "")
+            {
+                if (File.Exists(_Person.ImagePath))
+                {
+                    pbPersonImage.Load(_Person.ImagePath);
+                }
+                else
+                {
+                    MessageBox.Show($"Sorry Could not find this image {_Person.ImagePath}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            else
+            {
+                if (_Person.Gender == 0)
+                {
+                    pbPersonImage.Image = Resources.employee_17986056;
+                }
+                else
+                {
+                    pbPersonImage.Image = Resources.people_15676106;
+
+                }
+            }
+        }
         public void FillPersonCard()
         {
             _PersonID = _Person.PersonID;
@@ -78,32 +105,7 @@ namespace DVLD
 
             lblCountry.Text = clsCountry.Find(_Person.NationalityCountryID).CountryName;
 
-            if (_Person.ImagePath != "")
-            {
-                if (File.Exists(_Person.ImagePath))
-                {
-                    pbPersonImage.Load(_Person.ImagePath);
-                }
-                else
-                {
-                    MessageBox.Show($"Sorry Could not find this image {_Person.ImagePath}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-            else
-            {
-                if (_Person.Gender == 0)
-                {
-                    pbPersonImage.Image = Resources.employee_17986056;
-                }
-                else
-                {
-                    pbPersonImage.Image = Resources.people_15676106;
-
-                }
-            }
-
-
+            CheckPersonImage();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

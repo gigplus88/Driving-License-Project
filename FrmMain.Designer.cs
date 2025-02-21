@@ -132,6 +132,7 @@
             this.internationalLicenseToolStripMenuItem.Name = "internationalLicenseToolStripMenuItem";
             this.internationalLicenseToolStripMenuItem.Size = new System.Drawing.Size(245, 36);
             this.internationalLicenseToolStripMenuItem.Text = "International License";
+            this.internationalLicenseToolStripMenuItem.Click += new System.EventHandler(this.internationalLicenseToolStripMenuItem_Click);
             // 
             // renewDrivingLicenseToolStripMenuItem
             // 
@@ -187,6 +188,7 @@
             this.internationalLicenseApplicationsToolStripMenuItem.Name = "internationalLicenseApplicationsToolStripMenuItem";
             this.internationalLicenseApplicationsToolStripMenuItem.Size = new System.Drawing.Size(345, 36);
             this.internationalLicenseApplicationsToolStripMenuItem.Text = "International License Applications";
+            this.internationalLicenseApplicationsToolStripMenuItem.Click += new System.EventHandler(this.internationalLicenseApplicationsToolStripMenuItem_Click);
             // 
             // tsmDetainLicenses
             // 
@@ -226,9 +228,12 @@
             // driversToolStripMenuItem1
             // 
             this.driversToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.driversToolStripMenuItem1.Image = global::DVLD.Properties.Resources.Driver_1_;
+            this.driversToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.driversToolStripMenuItem1.Name = "driversToolStripMenuItem1";
-            this.driversToolStripMenuItem1.Size = new System.Drawing.Size(73, 46);
+            this.driversToolStripMenuItem1.Size = new System.Drawing.Size(103, 46);
             this.driversToolStripMenuItem1.Text = "Drivers";
+            this.driversToolStripMenuItem1.Click += new System.EventHandler(this.driversToolStripMenuItem1_Click);
             // 
             // usersToolStripMenuItem1
             // 

@@ -86,6 +86,25 @@ namespace DVLD
 
         }
 
+        public void LoadAllPersonInfo(int PersonID)
+        {
+            _Person = clsPerson.Find(PersonID);
+            if (_Person != null)
+            {
+                cbFindBy.Enabled = false;
+                txtPersonInfo.Enabled = false;
+                btnSearch.Enabled = false;
+                btnAddPerson.Enabled = false;
+
+                cbFindBy.SelectedItem =  "PersonID";
+                txtPersonInfo.Text = _Person.PersonID.ToString();
+                ctrlPersonCard1.LoadPersonInfo(_Person.PersonID);
+            }
+            else
+            {
+                MessageBox.Show("Person not Found","error" , MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+        }
 
 
 

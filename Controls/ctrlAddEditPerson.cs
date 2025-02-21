@@ -25,11 +25,6 @@ namespace DVLD
             Update = 1
         };
         public enMode Mode = enMode.AddNew;
-
-
-
-
-
         public int PersonID
         {
             get { return _PersonID; }
@@ -439,6 +434,11 @@ namespace DVLD
             {
                 FrmAddEditPersonInfo.Close();
             }
+        }
+
+        private void txtNationalNo_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         public void UpdatePersonFromContext(int PersonID)

@@ -1,4 +1,6 @@
-﻿using DVLD.Test_Type;
+﻿using DVLD.License;
+using DVLD.Test_Type;
+using DVLD.Test_Type.Street_Test;
 using DVLD_Business;
 using System;
 using System.Collections.Generic;
@@ -11,12 +13,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLD.FrmMain;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DVLD.Applications
 {
     public partial class FrmLocalDrivingLicenseApplications : Form
     {
-      
         public FrmLocalDrivingLicenseApplications()
         {
             InitializeComponent();
@@ -25,7 +27,6 @@ namespace DVLD.Applications
         {
             dgvLocalDrivingLicenseApplications.DataSource = clsLocalDrivingLicenseApplication.GetAllLDLAs();
             lblNumberOfLocalDrivingLicenseApplications.Text = clsLocalDrivingLicenseApplication.CountLDLA().ToString();
-
         }
         private void FrmLocalDrivingLicenseApplications_Load(object sender, EventArgs e)
         {
@@ -155,8 +156,7 @@ namespace DVLD.Applications
                 clsApplication.CancelApplication(LDLAppID);
                 MessageBox.Show("Application Cancelled Successfully", "Cancelled", MessageBoxButtons.OK);
                 RefreshData();
-            }
-                
+            }       
         }
 
         private void dgvLocalDrivingLicenseApplications_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -167,25 +167,82 @@ namespace DVLD.Applications
 
                 LDLAppID =Convert.ToInt32(selectedRow.Cells["LocalDrivingLicenseApplicationID"].Value);
             }
+            CheckTestResult();
         }
 
         private void btnCloseManagePeople_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        void UpdateButtonsForPersonApplicant()
+        {
+            showApplicationDetailsToolStripMenuItem.Enabled = true;
+            editApplicationToolStripMenuItem.Enabled=true;
+            deleteApplicationToolStripMenuItem.Enabled = true;
+            cancelApplicationToolStripMenuItem.Enabled = true;
+            sechduleTestsToolStripMenuItem.Enabled = true;
+            
+        }
+        void UpdateButtonsForDriverPerson()
+        {
+            showApplicationDetailsToolStripMenuItem.Enabled = false;
+            editApplicationToolStripMenuItem.Enabled=false;
+            deleteApplicationToolStripMenuItem.Enabled = false;
+            cancelApplicationToolStripMenuItem.Enabled = false;
+            sechduleTestsToolStripMenuItem.Enabled = false;
+            issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = false;
+            showLicenseToolStripMenuItem.Enabled = true;
+        }
+        public void CheckTestResult()
+        {
+            AppID = clsLocalDrivingLicenseApplication.GetAppIDByDLAppID(LDLAppID);
 
+            if (clsLicense.IfDontHasLicense(AppID) || 
+                clsLicense.IfHasLicenseActive(AppID, 0))
+            {
+                UpdateButtonsForPersonApplicant();
+                CheckIfPassVisionResult();
+                CheckIfPassWrittenResult();
+                CheckIfPassStreetResult();
+            }
+            else if(clsLicense.IfHasLicenseActive(AppID, 1)) // 1 is Active
+            {
+                UpdateButtonsForDriverPerson();
+            }
+            else
+            {
+                issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = true;
+            }
+        }
         public void CheckIfPassVisionResult()
         {
-            if (clsTest.LastVisionTest(LDLAppID ,(int) FrmMain.enApplicationTypeID.NewLocalDrivingLicense))
+            if (clsLocalDrivingLicenseApplication.GetLPassedTestNumber(LDLAppID) == 1) // 1 means He passed vision test
             {
                 secheduleVisionTestToolStripMenuItem.Enabled=false;
                 secheduleWrittenTestToolStripMenuItem.Enabled = true;
             }
         }
-
+        public void CheckIfPassWrittenResult()
+        {
+            if (clsLocalDrivingLicenseApplication.GetLPassedTestNumber(LDLAppID) == 2) // 2 means He passed vision test
+            {
+                secheduleVisionTestToolStripMenuItem.Enabled=false;
+                secheduleWrittenTestToolStripMenuItem.Enabled = false;
+                secheduleStreetTestToolStripMenuItem.Enabled =true;
+            }
+        }
+        public void CheckIfPassStreetResult()
+        {
+            if (clsLocalDrivingLicenseApplication.GetLPassedTestNumber(LDLAppID) == 3) // 2 means He passed vision test
+            {
+                sechduleTestsToolStripMenuItem.Enabled = false ;
+                issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = true;
+            }
+        }
+        int AppID;
         private void secheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int AppID = clsLocalDrivingLicenseApplication.GetAppIDByDLAppID(LDLAppID);
+             AppID = clsLocalDrivingLicenseApplication.GetAppIDByDLAppID(LDLAppID);
 
             FrmVisionTestAppointements frmVisionTestAppointements = new FrmVisionTestAppointements(AppID , LDLAppID);
             frmVisionTestAppointements.FillctrlDrivingLicenseApp();
@@ -193,6 +250,84 @@ namespace DVLD.Applications
             CheckIfPassVisionResult();
             RefreshData();
 
+        }
+
+        private void secheduleWrittenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             AppID = clsLocalDrivingLicenseApplication.GetAppIDByDLAppID(LDLAppID);
+
+            FrmWrittenTestAppointments frmWrittenTestAppointements = new FrmWrittenTestAppointments(AppID, LDLAppID);
+            frmWrittenTestAppointements.FillctrlDrivingLicenseApp();
+            frmWrittenTestAppointements.Show();
+            CheckIfPassWrittenResult();
+            RefreshData();
+        }
+
+        private void secheduleStreetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             AppID = clsLocalDrivingLicenseApplication.GetAppIDByDLAppID(LDLAppID);
+
+            FrmStreetTestAppointments frmWrittenTestAppointements = new FrmStreetTestAppointments(AppID, LDLAppID);
+            frmWrittenTestAppointements.FillctrlDrivingLicenseApp();
+            frmWrittenTestAppointements.Show();
+            CheckIfPassStreetResult();
+            RefreshData();
+        }
+
+        void IssueButtonsAfterGetLicense()
+        {
+            showLicenseToolStripMenuItem.Enabled = true;
+            issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = false;
+        }
+        void AddLicenseData()
+        {
+            clsLicense License = new clsLicense();
+            License.Save();
+        }
+        /* void CompleteApplicationStatus()
+         {
+             _Application = clsApplication.Find(clsLocalDrivingLicenseApplication.GetAppIDByDLAppID(LDLAppID));
+             _Application.ApplicationPersonID = _Application.ApplicationPersonID;
+             _Application.ApplicationDate = _Application.ApplicationDate;
+             _Application.ApplicationTypeID = _Application.ApplicationTypeID;
+             _Application.ApplicationStatus = 3; // 3 is complete 
+             _Application.LastStatusDate = _Application.LastStatusDate;
+             _Application.PaidFees = _Application.PaidFees;
+             _Application.CreatedByID = clsUser.GetUserIDByUserName(GlobalSettings.CurrentUserInfo.UserName);
+
+             clsApplication.Mode = clsApplication.enMode.Update;
+             _Application.Save();
+         }*/
+        void CompleteApplication()
+        {
+            clsApplication.CompleteApplication(LDLAppID);
+        }
+        private void issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AppID = clsLocalDrivingLicenseApplication.GetAppIDByDLAppID(LDLAppID);
+
+            if (clsLocalDrivingLicenseApplication.GetLPassedTestNumber(LDLAppID) == 3) 
+            {
+                FrmIssueDriverLicense frmIssueDriverLicense = new FrmIssueDriverLicense(LDLAppID ,AppID);
+                frmIssueDriverLicense.ShowDialog();
+                AddLicenseData();
+                CompleteApplication();
+                RefreshData();
+                IssueButtonsAfterGetLicense();
+            }
+        }
+
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmShowLicenseInfo frmShowLicenseInfo = new FrmShowLicenseInfo(LDLAppID);
+            frmShowLicenseInfo.LoadLicenseInfoByLDLApp(LDLAppID);
+            frmShowLicenseInfo.ShowDialog();
+        }
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AppID = clsLocalDrivingLicenseApplication.GetAppIDByDLAppID(LDLAppID);
+            FrmLicenseHistory frmLicenseHistory = new FrmLicenseHistory(AppID);
+            frmLicenseHistory.ShowDialog();
         }
     }
 }

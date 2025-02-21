@@ -120,7 +120,7 @@ namespace DVLD.Applications
         }
         bool IsApplicationWithLicenseClasseCanDoing()
         {
-            if (!clsApplication.IsPersonHasApplicationByLicenseClasse(Convert.ToInt16(clsLicenseClasse.GetLicenseClassIDByClassName(cbLicenseClass.SelectedItem.ToString() )) ,_ApplicantPersonID)) 
+            if (!clsApplication.IsPersonHasAppByLicenseClasse(Convert.ToInt16(clsLicenseClasse.GetLicenseClassIDByClassName(cbLicenseClass.SelectedItem.ToString() )) ,_ApplicantPersonID)) 
             {
                 return true;
             }

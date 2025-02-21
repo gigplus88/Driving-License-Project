@@ -1,4 +1,5 @@
 ﻿using DVLD.Applications;
+using DVLD.License;
 using DVLD.Users;
 using DVLD_Business;
 using System;
@@ -23,6 +24,13 @@ namespace DVLD
         }
 
         public enApplicationTypeID ApplicationTypeID;
+        public enum enTestType
+        {
+            Vision = 1,
+            Written = 2,
+            Practical = 3
+        };
+        public static enTestType TestType;
         public FrmMain()
         {
             InitializeComponent();
@@ -140,6 +148,24 @@ namespace DVLD
         private void localDrivingApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmLocalDrivingLicenseApplications frm = new FrmLocalDrivingLicenseApplications();
+            frm.ShowDialog();
+        }
+
+        private void driversToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmListDrivers listDrivers = new FrmListDrivers();
+            listDrivers.ShowDialog();
+        }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNewInternationalLicenseApplication frm = new FrmNewInternationalLicenseApplication();
+            frm.ShowDialog();
+        }
+
+        private void internationalLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmInternationalDrivingLicenseApplications frm = new FrmInternationalDrivingLicenseApplications();
             frm.ShowDialog();
         }
     }

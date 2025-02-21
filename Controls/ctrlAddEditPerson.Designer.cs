@@ -55,6 +55,10 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.llblSetImage = new System.Windows.Forms.LinkLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.llblRemove = new System.Windows.Forms.LinkLabel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.pbPersonImage = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -64,10 +68,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbGendorImage = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.llblRemove = new System.Windows.Forms.LinkLabel();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -198,6 +198,7 @@
             this.txtNationalNo.Name = "txtNationalNo";
             this.txtNationalNo.Size = new System.Drawing.Size(108, 20);
             this.txtNationalNo.TabIndex = 67;
+            this.txtNationalNo.TextChanged += new System.EventHandler(this.txtNationalNo_TextChanged);
             this.txtNationalNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalNo_Validating);
             // 
             // label9
@@ -325,6 +326,43 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // llblRemove
+            // 
+            this.llblRemove.AutoSize = true;
+            this.llblRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblRemove.Location = new System.Drawing.Point(851, 324);
+            this.llblRemove.Name = "llblRemove";
+            this.llblRemove.Size = new System.Drawing.Size(59, 16);
+            this.llblRemove.TabIndex = 86;
+            this.llblRemove.TabStop = true;
+            this.llblRemove.Text = "Remove";
+            this.llblRemove.Visible = false;
+            this.llblRemove.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblRemove_LinkClicked);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(395, 342);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(81, 35);
+            this.btnSave.TabIndex = 87;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(514, 342);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(85, 35);
+            this.btnCancel.TabIndex = 88;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // pbPersonImage
             // 
             this.pbPersonImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -424,43 +462,6 @@
             this.pbGendorImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbGendorImage.TabIndex = 55;
             this.pbGendorImage.TabStop = false;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // llblRemove
-            // 
-            this.llblRemove.AutoSize = true;
-            this.llblRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblRemove.Location = new System.Drawing.Point(851, 324);
-            this.llblRemove.Name = "llblRemove";
-            this.llblRemove.Size = new System.Drawing.Size(59, 16);
-            this.llblRemove.TabIndex = 86;
-            this.llblRemove.TabStop = true;
-            this.llblRemove.Text = "Remove";
-            this.llblRemove.Visible = false;
-            this.llblRemove.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblRemove_LinkClicked);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(395, 342);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(81, 35);
-            this.btnSave.TabIndex = 87;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(514, 342);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(85, 35);
-            this.btnCancel.TabIndex = 88;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // ctrlAddEditPerson
             // 
