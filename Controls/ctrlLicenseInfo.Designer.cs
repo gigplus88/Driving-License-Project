@@ -43,7 +43,7 @@
             this.gbFilter.Controls.Add(this.txtLicenseID);
             this.gbFilter.Location = new System.Drawing.Point(3, 3);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(970, 103);
+            this.gbFilter.Size = new System.Drawing.Size(668, 103);
             this.gbFilter.TabIndex = 0;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
@@ -52,7 +52,7 @@
             // btnFilterByLicenseID
             // 
             this.btnFilterByLicenseID.Image = global::DVLD.Properties.Resources.Driver_License1;
-            this.btnFilterByLicenseID.Location = new System.Drawing.Point(490, 37);
+            this.btnFilterByLicenseID.Location = new System.Drawing.Point(565, 37);
             this.btnFilterByLicenseID.Name = "btnFilterByLicenseID";
             this.btnFilterByLicenseID.Size = new System.Drawing.Size(53, 44);
             this.btnFilterByLicenseID.TabIndex = 87;

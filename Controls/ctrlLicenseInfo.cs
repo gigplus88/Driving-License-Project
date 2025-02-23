@@ -18,6 +18,8 @@ namespace DVLD.Controls
     {
         private FrmNewInternationalLicenseApplication _frmNewInternationalLicenseApplication; 
         private FrmRenewLocalDrivingLicense _frmRenewLocalDrivingLicense;
+        private FrmReplacementForDamagedLicense _frmReplacementForDamagedLicense;
+
         public ctrlLicenseInfo()
         {
             InitializeComponent();
@@ -30,6 +32,10 @@ namespace DVLD.Controls
         public void SetParentForm(FrmRenewLocalDrivingLicense frm)
         {
             _frmRenewLocalDrivingLicense = frm;
+        }
+        public void SetParentForm(FrmReplacementForDamagedLicense frm)
+        {
+            _frmReplacementForDamagedLicense = frm;
         }
         public int LicenseID;
        void LoadLicenseInfoForIntApp()
@@ -57,13 +63,18 @@ namespace DVLD.Controls
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        void GetInfosAfterSearching()
+        void GetInfosAfterSearchingForRenew()
         {
             _frmRenewLocalDrivingLicense.ExpirationDate();
             _frmRenewLocalDrivingLicense.UpdateLicenseID();
             _frmRenewLocalDrivingLicense.PaidFees();
             _frmRenewLocalDrivingLicense.AppFees();
             _frmRenewLocalDrivingLicense.TotalFees();
+        }
+        void GetInfosAfterSearchingForReplaceDamaged()
+        {
+            _frmReplacementForDamagedLicense.UpdateLicenseID();
+            _frmReplacementForDamagedLicense.DisabledIssueButtonForReplaceDamagedApp(true);
         }
         void DisabledIssueButtonAndAbleShowLicenseLink()
         {
@@ -73,20 +84,27 @@ namespace DVLD.Controls
         {
             _frmRenewLocalDrivingLicense.DisabledIssueButtonAndAbleShowLicenseLinkForRenewApp(false, true);
         }
-        void UpdateInfoAfterSearching()
+        void UpdateInfoAfterSearchingForRenew()
         {
             if (_frmRenewLocalDrivingLicense != null)
             {
-                GetInfosAfterSearching();
+                GetInfosAfterSearchingForRenew();
+            }
+        }
+        void UpdateInfoAfterSearchingForReplaceDamaged()
+        {
+            if (_frmReplacementForDamagedLicense != null)
+            {
+                GetInfosAfterSearchingForReplaceDamaged();
             }
         }
         int AppIDByLicenseID;
-        void GenerateLicenseInfo()
+        void GenerateLicenseInfoForRenew()
         {
             if (!clsLicense.IsExpireDate(LicenseID))
             {
                 AppIDByLicenseID = clsLicense.GetApplicationIDByLicenseID(LicenseID);
-                UpdateInfoAfterSearching();
+                UpdateInfoAfterSearchingForRenew();
                 DisabledIssueButtonAndAbleShowLicenseLinkForRenewApp();
                 driverLicenseInfo1.LoadLicenseInfoByAppID(AppIDByLicenseID);
 
@@ -95,7 +113,7 @@ namespace DVLD.Controls
             }
             else
             {
-                UpdateInfoAfterSearching();
+                UpdateInfoAfterSearchingForRenew();
                 driverLicenseInfo1.LoadLicenseInfoByAppID(AppIDByLicenseID);
             }
         }
@@ -110,9 +128,31 @@ namespace DVLD.Controls
             }
             else
             {
-                GenerateLicenseInfo();
+                GenerateLicenseInfoForRenew();
             }
                
+        }
+        void GenerateInfoForReplaceDamagedLicense()
+        {
+            UpdateInfoAfterSearchingForReplaceDamaged();
+            driverLicenseInfo1.LoadLicenseInfoByAppID(AppIDByLicenseID);   
+        }
+        void LoadLicenseInfoForReplaceForDamagedLicenseApp()
+        {
+            AppIDByLicenseID = clsLicense.GetApplicationIDByLicenseID(LicenseID);
+
+            if (clsLicense.IfDontHasLicense(AppIDByLicenseID))
+            {
+                MessageBox.Show($"You dont have any License with ID = {LicenseID} ", "Error" , MessageBoxButtons.OK , MessageBoxIcon.Information);
+            }
+            else if ( clsLicense.IfLicenseActive(LicenseID , 0)) //dont Active = 0
+            {
+                MessageBox.Show($"Selected License is not Active , Choose an Active License ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                GenerateInfoForReplaceDamagedLicense();
+            }
         }
         private void btnFilterByLicenseID_Click(object sender, EventArgs e)
         {
@@ -131,7 +171,11 @@ namespace DVLD.Controls
             {
                 LicenseID =Convert.ToInt32(Input);
                 LoadLicenseInfoForRenewLicenseApp();
-
+            }
+            else if (FrmMain.ApplicationTypeID == enApplicationTypeID.ReplacementforADamagedDL)
+            {
+                LicenseID =Convert.ToInt32(Input);
+                LoadLicenseInfoForReplaceForDamagedLicenseApp();
             }
         }
 

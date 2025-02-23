@@ -38,7 +38,7 @@ namespace DVLD.Applications
             FrmMain.ApplicationTypeID = enApplicationTypeID.RenewDrivingLicense;
         }
 
-        private void Close_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -70,7 +70,7 @@ namespace DVLD.Applications
             btnRenew.Enabled = Issue;
             llblShowLicensesInfo.Enabled = LicenseLink;
         }
-        void FillApplicationNewLicenseInfoCard()
+        void FillApplicationRenewNewLicenseInfoCard()
         {
             lblAppliocationDate.Text = DateTime.Now.ToString();
             lblIssueDate.Text = DateTime.Now.ToString();
@@ -82,7 +82,7 @@ namespace DVLD.Applications
         }
         private void FrmRenewLocalDrivingLicense_Load(object sender, EventArgs e)
         {
-            FillApplicationNewLicenseInfoCard();
+            FillApplicationRenewNewLicenseInfoCard();
         }
         int AppID, LicenseID, UserID;
 
@@ -170,6 +170,8 @@ namespace DVLD.Applications
             llblShowLicensesInfo.Enabled = true;
             ctrlLicenseInfo1.DisableGroupBoxFilter();
             btnRenew.Enabled = false;
+            lblRLApplicationID.Text = _Application.ApplicationID.ToString();
+            lblRenewedLicenseID.Text = _License.LicenseID.ToString();
         }
         private void btnRenew_Click(object sender, EventArgs e)
         {
@@ -204,7 +206,6 @@ namespace DVLD.Applications
                     }
                  }
             }
-            
             
         }
     }

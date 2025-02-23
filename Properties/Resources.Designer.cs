@@ -1033,6 +1033,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Smart_Card22 {
+            get {
+                object obj = ResourceManager.GetObject("Smart Card22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap telephone_724664 {
             get {
                 object obj = ResourceManager.GetObject("telephone_724664", resourceCulture);
