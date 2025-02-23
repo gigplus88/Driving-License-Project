@@ -553,6 +553,26 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Driver_License13 {
+            get {
+                object obj = ResourceManager.GetObject("Driver License13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Driver_License2 {
+            get {
+                object obj = ResourceManager.GetObject("Driver License2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Edit {
             get {
                 object obj = ResourceManager.GetObject("Edit", resourceCulture);
@@ -843,6 +863,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pbName2 {
+            get {
+                object obj = ResourceManager.GetObject("pbName2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap people_15676106 {
             get {
                 object obj = ResourceManager.GetObject("people_15676106", resourceCulture);
@@ -986,6 +1016,16 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap Smart_Card2 {
             get {
                 object obj = ResourceManager.GetObject("Smart Card2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Smart_Card21 {
+            get {
+                object obj = ResourceManager.GetObject("Smart Card21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

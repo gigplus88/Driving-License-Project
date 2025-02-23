@@ -94,6 +94,12 @@
     <Compile Include="Applications\FrmNewLocalDrivingLicenseApplication.Designer.cs">
       <DependentUpon>FrmNewLocalDrivingLicenseApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\FrmRenewLocalDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\FrmRenewLocalDrivingLicense.Designer.cs">
+      <DependentUpon>FrmRenewLocalDrivingLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctrlDriverInternationalLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications Types\FrmUpdateApplicationType.resx">
       <DependentUpon>FrmUpdateApplicationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\FrmRenewLocalDrivingLicense.resx">
+      <DependentUpon>FrmRenewLocalDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlDriverInternationalLicenseInfo.resx">
       <DependentUpon>ctrlDriverInternationalLicenseInfo.cs</DependentUpon>
@@ -694,6 +703,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Driver%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driver License.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

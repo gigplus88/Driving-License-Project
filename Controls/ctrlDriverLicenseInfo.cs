@@ -55,6 +55,53 @@ namespace DVLD.Controls
                 }
             }
         }
+        void GenerateIssueReason()
+        {
+            switch (_License.IssueReason)
+            {
+                case 1:
+                    lblIssueRaison.Text = "First TIme";
+                    break;
+
+                case 2:
+                    lblIssueRaison.Text = "Renew";
+                    break;
+
+                case 3:
+                    lblIssueRaison.Text = "Replacement For Lost License";
+                    break;
+
+                case 4:
+                    lblIssueRaison.Text = "Replacement For Damaged License";
+                    break;
+
+                case 5:
+                    lblIssueRaison.Text = "Release For Detained License";
+                    break;
+            }
+        }
+        void GenerateNote()
+        {
+            if (_License.Notes == "")
+            {
+                lblNotes.Text = "No Notes";
+            }
+            else
+            {
+                lblNotes.Text =  _License.Notes;
+            }
+        }
+        void GenerateIsActive()
+        {
+            if (_License.IsActive == 1)
+            {
+                lblIsActive.Text = "Yes";
+            }
+            else
+            {
+                lblIsActive.Text = "No";
+            }
+        }
         void FillLicenseInfoCard()
         {
             //For Person Info
@@ -78,17 +125,10 @@ namespace DVLD.Controls
             lblLicenseID.Text = _License.LicenseID.ToString();
             lblIssueDate.Text = _License.IssueDate.ToString();
 
-            lblIssueRaison.Text = Convert.ToInt32(_License.IssueReason).ToOrdinalWords() + "Time";
-            lblNotes.Text = _License.Notes;
+            GenerateIssueReason();
+            GenerateNote();
+            GenerateIsActive();
 
-            if (_License.IsActive == 1)
-            {
-                lblIsActive.Text = "Yes";
-            }
-            else
-            {
-                lblIsActive.Text = "No";
-            }
             lblDriverID.Text = _License.DriverID.ToString();
             lblExpirationDate.Text = _License.ExpirationDate.ToString();
 
@@ -140,6 +180,7 @@ namespace DVLD.Controls
             else
             {
                 MessageBox.Show("License Info not found", "Info");
+                
             }
         }
     }

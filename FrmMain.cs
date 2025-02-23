@@ -23,7 +23,7 @@ namespace DVLD
             ReatkeTest = 8
         }
 
-        public enApplicationTypeID ApplicationTypeID;
+        public static enApplicationTypeID ApplicationTypeID;
         public enum enTestType
         {
             Vision = 1,
@@ -166,6 +166,12 @@ namespace DVLD
         private void internationalLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmInternationalDrivingLicenseApplications frm = new FrmInternationalDrivingLicenseApplications();
+            frm.ShowDialog();
+        }
+
+        private void renewDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRenewLocalDrivingLicense frm = new FrmRenewLocalDrivingLicense();
             frm.ShowDialog();
         }
     }

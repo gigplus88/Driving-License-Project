@@ -30,7 +30,8 @@ namespace DVLD.Applications
         public FrmNewInternationalLicenseApplication()
         {
             InitializeComponent();
-            ctrLicenseInfo1.SetParentForm(this);
+            FrmMain.ApplicationTypeID = enApplicationTypeID.NewInternationalLicense;
+            ctrlLicenseInfo1.SetParentForm(this);
 
         }
         private ctrlLicenseInfo _ctrlLicenseInfo;
@@ -53,7 +54,7 @@ namespace DVLD.Applications
 
         private void llblShowLicensesInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmInternationalDriverInfo InternationalDriverInfo = new FrmInternationalDriverInfo(ctrLicenseInfo1.LicenseID);
+            FrmInternationalDriverInfo InternationalDriverInfo = new FrmInternationalDriverInfo(ctrlLicenseInfo1.LicenseID);
             InternationalDriverInfo.ShowDialog();
         }
 
@@ -75,31 +76,47 @@ namespace DVLD.Applications
             ButtonIssue.Enabled = Issue;
             llblShowLicensesInfo.Enabled = LicenseLink;
         }
-        public void SetIssueButtonState(bool isEnabled)
+        public void UpdateLicenseID()
         {
-            ButtonIssue.Enabled = isEnabled;
+            lblLocalLicenseID.Text =  ctrlLicenseInfo1.LicenseID.ToString();
         }
 
         private void llblShowLicensesHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AppID = clsLicense.GetApplicationIDByLicenseID(ctrLicenseInfo1.LicenseID);
+            AppID = clsLicense.GetApplicationIDByLicenseID(ctrlLicenseInfo1.LicenseID);
             FrmLicenseHistory frmLicenseHistory = new FrmLicenseHistory(AppID);
             frmLicenseHistory.ShowDialog();
         }
 
-        public void SetLicenseLinkState(bool isEnabled)
+        private void ctrLicenseInfo1_Load(object sender, EventArgs e)
         {
-            llblShowLicensesInfo.Enabled = isEnabled;
+
+        }
+        void FillApplicationInfoCard()
+        {
+            lblAppliocationDate.Text = DateTime.Now.ToString();
+            lblIssueDate.Text = DateTime.Now.ToString();
+
+            DateTime ExpirationDate = DateTime.Now.AddYears(1);
+            lblExpirationDate.Text = ExpirationDate.ToString();
+
+            lblCreatedBy.Text = GlobalSettings.CurrentUserInfo.UserName;
+            lblFees.Text = clsApplicationType.GetApplicationFeesByApplicationTypeID((byte)enApplicationTypeID.NewInternationalLicense).ToString();
+
+        }
+        private void FrmNewInternationalLicenseApplication_Load(object sender, EventArgs e)
+        {
+            FillApplicationInfoCard();
         }
         private void Issue_Click(object sender, EventArgs e)
         {
             UserID = clsUser.GetUserIDByUserName(GlobalSettings.CurrentUserInfo.UserName);
-            LicenseID = ctrLicenseInfo1.LicenseID;
+            LicenseID = ctrlLicenseInfo1.LicenseID;
             AppID = clsLicense.GetApplicationIDByLicenseID(LicenseID);
 
-            if (clsLicense.IfLicenseActive( ctrLicenseInfo1.LicenseID , 1) && !clsLicense.IsExpiratDate(ctrLicenseInfo1.LicenseID))
+            if (clsLicense.IfLicenseActive(ctrlLicenseInfo1.LicenseID , 1) && !clsLicense.IsExpireDate(ctrlLicenseInfo1.LicenseID))
             {
-                if (!clsInternationalLicense.IfHasActiveInternationalLicense(ctrLicenseInfo1.LicenseID))
+                if (!clsInternationalLicense.IfHasActiveInternationalLicense(ctrlLicenseInfo1.LicenseID))
                 {
                     _Application = new clsApplication();
                     _InternationalLicense = new clsInternationalLicense();
@@ -121,7 +138,7 @@ namespace DVLD.Applications
                                 MessageBox.Show($"International License Issued Successfully With ID = {_InternationalLicense.InternationalLicenseID}",
                                     "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 llblShowLicensesInfo.Enabled = true;
-                                ctrLicenseInfo1.DisableGroupBoxFilter();
+                                ctrlLicenseInfo1.DisableGroupBoxFilter();
                             }
 
 

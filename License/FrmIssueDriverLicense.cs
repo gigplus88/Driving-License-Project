@@ -63,9 +63,6 @@ namespace DVLD.License
             License.DriverID = _Driver.DriverID;
             License.LicenseClassID = clsLocalDrivingLicenseApplication.GetLicenseClassIDByDLAppID(_LDLAppID);
             License.IssueDate = DateTime.Now;
-
-            //DateTime DateOfExpiration = DateTime.UtcNow;
-
             License.ExpirationDate = License.IssueDate.AddYears(clsLicenseClasse.GetValidityLengthByLicenseClassID(License.LicenseClassID));
 
             if (txtNotes.Text == "")

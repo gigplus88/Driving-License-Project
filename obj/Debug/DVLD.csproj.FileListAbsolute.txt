@@ -99,3 +99,4 @@ C:\Solutions C#\DVLD\obj\Debug\DVLD.Controls.ctrlLicenseInfo.resources
 C:\Solutions C#\DVLD\obj\Debug\DVLD.Controls.ctrlDriverInternationalLicenseInfo.resources
 C:\Solutions C#\DVLD\obj\Debug\DVLD.License.FrmInternationalDriverInfo.resources
 C:\Solutions C#\DVLD\obj\Debug\DVLD.Applications.FrmInternationalDrivingLicenseApplications.resources
+C:\Solutions C#\DVLD\obj\Debug\DVLD.Applications.FrmRenewLocalDrivingLicense.resources

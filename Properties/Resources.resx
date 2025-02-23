@@ -208,8 +208,8 @@
   <data name="User_Male1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User Male1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add properties (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add properties (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Driver (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Driver (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Driver (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Driver (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -231,12 +231,6 @@
   </data>
   <data name="User_Male" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User Male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Driver (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Driver (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Calendar Plus (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Calendar Plus (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,8 +337,17 @@
   <data name="Smart Card2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Smart Card2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Close (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Delete (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Driver License13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Driver License1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pbName2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pbName.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Phone (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Phone (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -354,6 +357,9 @@
   </data>
   <data name="Geography (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Geography (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add properties (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add properties (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Users (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Users (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -406,14 +412,17 @@
   <data name="Edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Smart Card21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Smart Card2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Smart Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Smart Card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Driver License12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Driver License1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Car (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Car (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Calendar Plus (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendar Plus (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="employee_17986056" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee_17986056.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -421,8 +430,11 @@
   <data name="Certificate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Certificate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Close (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Driver(1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Driver(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Car (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Car (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="people_15676106" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\people_15676106.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -430,7 +442,7 @@
   <data name="User Settings (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User Settings (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Driver(1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Driver(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Driver License2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Driver License.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

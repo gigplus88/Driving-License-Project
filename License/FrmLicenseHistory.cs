@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Controls;
+using DVLD_Business;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,5 +73,24 @@ namespace DVLD.License
         {
 
         }
+
+        private void showLicenseInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmShowLicenseInfo frmShowLicenseInfo = new FrmShowLicenseInfo();
+            frmShowLicenseInfo.LoadLicenseInfoByAppID(AppID);
+            frmShowLicenseInfo.ShowDialog();
+        }
+
+        int AppID;
+        private void dgvLicenseInfo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >=0)
+            {
+                DataGridViewRow selectedRow = dgvLicenseInfo.Rows[e.RowIndex];
+
+                AppID =Convert.ToInt32(selectedRow.Cells["AppID"].Value);
+            }
+        }
     }
 }
+
