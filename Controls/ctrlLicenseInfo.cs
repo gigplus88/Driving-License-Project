@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using static Humanizer.On;
 using static DVLD.FrmMain;
 using DVLD.Applications;
+using DVLD.License;
 
 namespace DVLD.Controls
 {
@@ -19,7 +20,8 @@ namespace DVLD.Controls
         private FrmNewInternationalLicenseApplication _frmNewInternationalLicenseApplication; 
         private FrmRenewLocalDrivingLicense _frmRenewLocalDrivingLicense;
         private FrmReplacementForDamagedLicense _frmReplacementForDamagedLicense;
-
+        private FrmDetainLicense _frmDetainLicense;
+        private FrmReleaseDetainedLicense _frmReleaseDetainedLicense;
         public ctrlLicenseInfo()
         {
             InitializeComponent();
@@ -36,6 +38,14 @@ namespace DVLD.Controls
         public void SetParentForm(FrmReplacementForDamagedLicense frm)
         {
             _frmReplacementForDamagedLicense = frm;
+        }
+        public void SetParentForm(FrmDetainLicense frm)
+        {
+            _frmDetainLicense = frm;
+        }
+        public void SetParentForm(FrmReleaseDetainedLicense frm)
+        {
+            _frmReleaseDetainedLicense = frm;
         }
         public int LicenseID;
        void LoadLicenseInfoForIntApp()
@@ -71,10 +81,20 @@ namespace DVLD.Controls
             _frmRenewLocalDrivingLicense.AppFees();
             _frmRenewLocalDrivingLicense.TotalFees();
         }
+        void GetInfosAfterSearchingForReleaseDetained()
+        {
+            _frmReleaseDetainedLicense.UpdateInfoAfterSearching();
+            _frmReleaseDetainedLicense.DisabledReleaseButtonForApp(true);
+        }
         void GetInfosAfterSearchingForReplaceDamaged()
         {
             _frmReplacementForDamagedLicense.UpdateLicenseID();
-            _frmReplacementForDamagedLicense.DisabledIssueButtonForReplaceDamagedApp(true);
+            _frmReplacementForDamagedLicense.DisabledIssueButtonForApp(true);
+        }
+        void GetInfosAfterSearchingForDetainLicense()
+        {
+            _frmDetainLicense.UpdateLicenseID();
+            _frmDetainLicense.DisabledDetainButton(true);
         }
         void DisabledIssueButtonAndAbleShowLicenseLink()
         {
@@ -96,6 +116,20 @@ namespace DVLD.Controls
             if (_frmReplacementForDamagedLicense != null)
             {
                 GetInfosAfterSearchingForReplaceDamaged();
+            }
+        }
+        void UpdateInfoAfterSearchingForReleaseDetained()
+        {
+            if (_frmReleaseDetainedLicense != null)
+            {
+                GetInfosAfterSearchingForReleaseDetained();
+            }
+        }
+        void UpdateInfoAfterSearchingForDetainLicense()
+        {
+            if (_frmDetainLicense != null)
+            {
+                GetInfosAfterSearchingForDetainLicense();
             }
         }
         int AppIDByLicenseID;
@@ -137,6 +171,16 @@ namespace DVLD.Controls
             UpdateInfoAfterSearchingForReplaceDamaged();
             driverLicenseInfo1.LoadLicenseInfoByAppID(AppIDByLicenseID);   
         }
+        void GenerateInfoForDetainLicense()
+        {
+            UpdateInfoAfterSearchingForDetainLicense();
+            driverLicenseInfo1.LoadLicenseInfoByAppID(AppIDByLicenseID);
+        }
+        void GenerateInfoForReleaseDetainedLicense()
+        {
+            UpdateInfoAfterSearchingForReleaseDetained();
+            driverLicenseInfo1.LoadLicenseInfoByAppID(AppIDByLicenseID);
+        }
         void LoadLicenseInfoForReplaceForDamagedLicenseApp()
         {
             AppIDByLicenseID = clsLicense.GetApplicationIDByLicenseID(LicenseID);
@@ -149,16 +193,60 @@ namespace DVLD.Controls
             {
                 MessageBox.Show($"Selected License is not Active , Choose an Active License ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
+            else 
             {
                 GenerateInfoForReplaceDamagedLicense();
             }
         }
-        private void btnFilterByLicenseID_Click(object sender, EventArgs e)
+        void LoadLicenseInfoForReleaseDetainLicenseApp()
         {
-            string Input = txtLicenseID.Text;
+            AppIDByLicenseID = clsLicense.GetApplicationIDByLicenseID(LicenseID);
 
-            if (Input == "")
+            if (clsLicense.IfDontHasLicense(AppIDByLicenseID))
+            {
+                MessageBox.Show($"You dont have any License with ID = {LicenseID} ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (clsLicense.IfLicenseActive(LicenseID, 0)) //dont Active = 0
+            {
+                MessageBox.Show($"Selected License is not Active , Choose an Active License ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!clsDetainedLicense.IsDetainedLicense(LicenseID))
+            {
+                MessageBox.Show($"Selected License is not Detained , Choose an Other License ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                GenerateInfoForReleaseDetainedLicense(); ;
+            }
+        }
+        void LoadInfoToDetainLicense()
+        {
+            AppIDByLicenseID = clsLicense.GetApplicationIDByLicenseID(LicenseID);
+
+            if (clsLicense.IfDontHasLicense(AppIDByLicenseID))
+            {
+                MessageBox.Show($"You dont have any License with ID = {LicenseID} ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (clsLicense.IfLicenseActive(LicenseID, 0)) //dont Active = 0
+            {
+                MessageBox.Show($"Selected License is not Active , Choose an Active License ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (clsDetainedLicense.IsDetainedLicense(LicenseID))
+            {
+                MessageBox.Show($"Selected License is Detained , Choose an Free License ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                GenerateInfoForDetainLicense();
+            }
+        }
+        public void WrittetxtValueFilterBy(string Input)
+        {
+            txtLicenseID.Text =  Input;
+        }
+        public void GenerateFilterClick(string Input)
+        {
+                if (Input == "")
             {
                 MessageBox.Show("Your textbox is empty , Enter your LicenseID", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -177,6 +265,23 @@ namespace DVLD.Controls
                 LicenseID =Convert.ToInt32(Input);
                 LoadLicenseInfoForReplaceForDamagedLicenseApp();
             }
+            else if (FrmMain.ApplicationTypeID == enApplicationTypeID.ReleaseDetainedDL)
+            {
+                LicenseID =Convert.ToInt32(Input);
+                LoadLicenseInfoForReleaseDetainLicenseApp();
+                driverLicenseInfo1.LoadLicenseInfoByAppID(AppIDByLicenseID);
+                _frmReleaseDetainedLicense.UpdateLicenseID();
+
+            }
+            else
+            {
+                LicenseID =Convert.ToInt32(Input);
+                LoadInfoToDetainLicense();
+            }
+        }
+        private void btnFilterByLicenseID_Click(object sender, EventArgs e)
+        {
+            GenerateFilterClick(txtLicenseID.Text);
         }
 
         private void txtLicenseID_KeyPress(object sender, KeyPressEventArgs e)

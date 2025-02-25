@@ -10,8 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DVLD.FrmMain;
-using static Humanizer.On;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace DVLD.Applications
 {
@@ -44,11 +42,11 @@ namespace DVLD.Applications
         {
             lblOldLicenseID.Text =  ctrlLicenseInfo1.LicenseID.ToString();
         }
-        public void DisabledIssueButtonForReplaceDamagedApp(bool Issue)
+        public void DisabledIssueButtonForApp(bool Issue)
         {
             btnIssueReplacement.Enabled = Issue;
         }
-        void SaveDamagedApplicationInfo(enApplicationTypeID ApplicationTypeID)
+        void SavedApplicationInfo(enApplicationTypeID ApplicationTypeID)
         {
             _Application.ApplicationPersonID = clsApplication.GetPersonIDByAppID(AppID);
             _Application.ApplicationDate = DateTime.Now;
@@ -105,9 +103,9 @@ namespace DVLD.Applications
             lblReplacedLicenseID.Text = clsLicense.GetLicenseIDByApplicationID(_Application.ApplicationID).ToString();
         }
         int AppID, LicenseID, UserID;
-        void GenerateDamagedLicense(enApplicationTypeID ApplicationTypeID)
+        void GenerateReplacementLicense(enApplicationTypeID ApplicationTypeID)
         {
-            SaveDamagedApplicationInfo(ApplicationTypeID);
+            SavedApplicationInfo(ApplicationTypeID);
 
             if (_Application.Save())
             {
@@ -143,11 +141,11 @@ namespace DVLD.Applications
 
             if (rbdamagedLicense.Checked)
             {
-                GenerateDamagedLicense(enApplicationTypeID.ReplacementforADamagedDL);
+                GenerateReplacementLicense(enApplicationTypeID.ReplacementforADamagedDL);
             }
             else if (rbLostLicense.Checked)
             {
-                GenerateDamagedLicense(enApplicationTypeID.ReplacementforALostDL);
+                GenerateReplacementLicense(enApplicationTypeID.ReplacementforALostDL);
             }
             else
             {

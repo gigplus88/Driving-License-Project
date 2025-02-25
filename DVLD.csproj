@@ -94,6 +94,12 @@
     <Compile Include="Applications\FrmNewLocalDrivingLicenseApplication.Designer.cs">
       <DependentUpon>FrmNewLocalDrivingLicenseApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\FrmReleaseDetainedLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\FrmReleaseDetainedLicense.Designer.cs">
+      <DependentUpon>FrmReleaseDetainedLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\FrmRenewLocalDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     <Compile Include="Controls\ctrlLicenseInfo.Designer.cs">
       <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="License\FrmDetainLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\FrmDetainLicense.Designer.cs">
+      <DependentUpon>FrmDetainLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="License\FrmInternationalDriverInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,17 +160,23 @@
     <Compile Include="License\FrmLicenseHistory.Designer.cs">
       <DependentUpon>FrmLicenseHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="License\FrmListDetainedlLicenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\FrmListDetainedlLicenses.Designer.cs">
+      <DependentUpon>FrmListDetainedlLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="License\FrmShowLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="License\FrmShowLicenseInfo.Designer.cs">
       <DependentUpon>FrmShowLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="License\ListDrivers.cs">
+    <Compile Include="License\FrmListDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="License\ListDrivers.Designer.cs">
-      <DependentUpon>ListDrivers.cs</DependentUpon>
+    <Compile Include="License\FrmListDrivers.Designer.cs">
+      <DependentUpon>FrmListDrivers.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests\FrmListTestType.cs">
       <SubType>Form</SubType>
@@ -328,6 +346,9 @@
     <EmbeddedResource Include="Applications Types\FrmUpdateApplicationType.resx">
       <DependentUpon>FrmUpdateApplicationType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Applications\FrmReleaseDetainedLicense.resx">
+      <DependentUpon>FrmReleaseDetainedLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Applications\FrmRenewLocalDrivingLicense.resx">
       <DependentUpon>FrmRenewLocalDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +367,9 @@
     <EmbeddedResource Include="Controls\ctrlLicenseInfo.resx">
       <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="License\FrmDetainLicense.resx">
+      <DependentUpon>FrmDetainLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="License\FrmInternationalDriverInfo.resx">
       <DependentUpon>FrmInternationalDriverInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,11 +379,14 @@
     <EmbeddedResource Include="License\FrmLicenseHistory.resx">
       <DependentUpon>FrmLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="License\FrmListDetainedlLicenses.resx">
+      <DependentUpon>FrmListDetainedlLicenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="License\FrmShowLicenseInfo.resx">
       <DependentUpon>FrmShowLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="License\ListDrivers.resx">
-      <DependentUpon>ListDrivers.cs</DependentUpon>
+    <EmbeddedResource Include="License\FrmListDrivers.resx">
+      <DependentUpon>FrmListDrivers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\FrmListTestType.resx">
       <DependentUpon>FrmListTestType.cs</DependentUpon>
@@ -715,6 +742,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Driver License.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand Side View Skin Type 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand Little.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand %281%29 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

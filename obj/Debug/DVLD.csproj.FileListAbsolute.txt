@@ -101,3 +101,6 @@ C:\Solutions C#\DVLD\obj\Debug\DVLD.License.FrmInternationalDriverInfo.resources
 C:\Solutions C#\DVLD\obj\Debug\DVLD.Applications.FrmInternationalDrivingLicenseApplications.resources
 C:\Solutions C#\DVLD\obj\Debug\DVLD.Applications.FrmRenewLocalDrivingLicense.resources
 C:\Solutions C#\DVLD\obj\Debug\DVLD.Applications.FrmReplacementForDamagedLicense.resources
+C:\Solutions C#\DVLD\obj\Debug\DVLD.License.FrmDetainLicense.resources
+C:\Solutions C#\DVLD\obj\Debug\DVLD.Applications.FrmReleaseDetainedLicense.resources
+C:\Solutions C#\DVLD\obj\Debug\DVLD.License.FrmListDetainedlLicenses.resources

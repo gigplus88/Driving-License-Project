@@ -74,7 +74,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(328, 25);
+            this.label9.Location = new System.Drawing.Point(299, 25);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(389, 30);
             this.label9.TabIndex = 127;

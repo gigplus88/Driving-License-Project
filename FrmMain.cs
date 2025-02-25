@@ -180,5 +180,35 @@ namespace DVLD
             FrmReplacementForDamagedLicense frm = new FrmReplacementForDamagedLicense();
             frm.ShowDialog();
         }
+
+        private void detainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDetainLicense frm = new FrmDetainLicense();
+            frm.ShowDialog();
+        }
+
+        private void releaseDetainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReleaseDetainedLicense frm = new FrmReleaseDetainedLicense();
+            frm.ShowDialog();
+        }
+
+        private void manageDetainedLicensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListDetainedlLicenses frm = new FrmListDetainedlLicenses();
+            frm.ShowDialog();
+        }
+
+        private void retakeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLocalDrivingLicenseApplications frm = new FrmLocalDrivingLicenseApplications();
+            frm.ShowDialog();
+        }
+
+        private void releaseDetainedDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReleaseDetainedLicense frm = new FrmReleaseDetainedLicense();
+            frm.ShowDialog();
+        }
     }
 }

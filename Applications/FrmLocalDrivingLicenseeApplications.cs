@@ -110,9 +110,7 @@ namespace DVLD.Applications
             FilterItem = cbFilterBy.SelectedItem.ToString().Trim();
             Filtering();
         }
-      
-      
-
+     
         private void txtFilterBy_TextChanged(object sender, EventArgs e)
         {
             Validation();

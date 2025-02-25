@@ -39,7 +39,10 @@
             this.cmsLocalDrivingLicenseApplication = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showApplicationDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.editApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.sechduleTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.secheduleVisionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,9 +54,6 @@
             this.showLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.showPersonLicenseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCloseManagePeople = new System.Windows.Forms.Button();
             this.btnNewApplication = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -163,7 +163,7 @@
             this.toolStripSeparator6,
             this.showPersonLicenseHistoryToolStripMenuItem});
             this.cmsLocalDrivingLicenseApplication.Name = "cmsLocalDrivingLicenseApplication";
-            this.cmsLocalDrivingLicenseApplication.Size = new System.Drawing.Size(280, 510);
+            this.cmsLocalDrivingLicenseApplication.Size = new System.Drawing.Size(280, 488);
             // 
             // showApplicationDetailsToolStripMenuItem
             // 
@@ -176,10 +176,37 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(276, 6);
             // 
+            // editApplicationToolStripMenuItem
+            // 
+            this.editApplicationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editApplicationToolStripMenuItem.Image = global::DVLD.Properties.Resources.Edit2;
+            this.editApplicationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.editApplicationToolStripMenuItem.Name = "editApplicationToolStripMenuItem";
+            this.editApplicationToolStripMenuItem.Size = new System.Drawing.Size(279, 56);
+            this.editApplicationToolStripMenuItem.Text = "Edit Application";
+            // 
+            // deleteApplicationToolStripMenuItem
+            // 
+            this.deleteApplicationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.deleteApplicationToolStripMenuItem.Image = global::DVLD.Properties.Resources.Delete;
+            this.deleteApplicationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deleteApplicationToolStripMenuItem.Name = "deleteApplicationToolStripMenuItem";
+            this.deleteApplicationToolStripMenuItem.Size = new System.Drawing.Size(279, 56);
+            this.deleteApplicationToolStripMenuItem.Text = "Delete Application";
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(276, 6);
+            // 
+            // cancelApplicationToolStripMenuItem
+            // 
+            this.cancelApplicationToolStripMenuItem.Image = global::DVLD.Properties.Resources.Close__2_;
+            this.cancelApplicationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
+            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(279, 56);
+            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
+            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -256,33 +283,6 @@
             this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(279, 56);
             this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show Person License History";
             this.showPersonLicenseHistoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicenseHistoryToolStripMenuItem_Click);
-            // 
-            // editApplicationToolStripMenuItem
-            // 
-            this.editApplicationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editApplicationToolStripMenuItem.Image = global::DVLD.Properties.Resources.Edit2;
-            this.editApplicationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.editApplicationToolStripMenuItem.Name = "editApplicationToolStripMenuItem";
-            this.editApplicationToolStripMenuItem.Size = new System.Drawing.Size(279, 56);
-            this.editApplicationToolStripMenuItem.Text = "Edit Application";
-            // 
-            // deleteApplicationToolStripMenuItem
-            // 
-            this.deleteApplicationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.deleteApplicationToolStripMenuItem.Image = global::DVLD.Properties.Resources.Delete;
-            this.deleteApplicationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.deleteApplicationToolStripMenuItem.Name = "deleteApplicationToolStripMenuItem";
-            this.deleteApplicationToolStripMenuItem.Size = new System.Drawing.Size(279, 56);
-            this.deleteApplicationToolStripMenuItem.Text = "Delete Application";
-            // 
-            // cancelApplicationToolStripMenuItem
-            // 
-            this.cancelApplicationToolStripMenuItem.Image = global::DVLD.Properties.Resources.Close__2_;
-            this.cancelApplicationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
-            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(279, 56);
-            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
-            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
             // 
             // btnCloseManagePeople
             // 
