@@ -1,0 +1,13 @@
+C:\Solutions C#\DVLD_Business\bin\Debug\DVLD_Business.exe.config
+C:\Solutions C#\DVLD_Business\bin\Debug\DVLD_Business.exe
+C:\Solutions C#\DVLD_Business\bin\Debug\DVLD_Business.pdb
+C:\Solutions C#\DVLD_Business\bin\Debug\DVLD_DataAccess.exe
+C:\Solutions C#\DVLD_Business\bin\Debug\DVLD_DataAccess.pdb
+C:\Solutions C#\DVLD_Business\bin\Debug\DVLD_DataAccess.exe.config
+C:\Solutions C#\DVLD_Business\obj\Debug\DVLD_Business.csproj.AssemblyReference.cache
+C:\Solutions C#\DVLD_Business\obj\Debug\DVLD_Business.Properties.Resources.resources
+C:\Solutions C#\DVLD_Business\obj\Debug\DVLD_Business.csproj.GenerateResource.cache
+C:\Solutions C#\DVLD_Business\obj\Debug\DVLD_Business.csproj.CoreCompileInputs.cache
+C:\Solutions C#\DVLD_Business\obj\Debug\DVLD_Bus.1422E61B.Up2Date
+C:\Solutions C#\DVLD_Business\obj\Debug\DVLD_Business.exe
+C:\Solutions C#\DVLD_Business\obj\Debug\DVLD_Business.pdb

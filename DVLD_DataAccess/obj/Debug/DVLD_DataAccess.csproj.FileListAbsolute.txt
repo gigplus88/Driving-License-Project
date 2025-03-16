@@ -1,0 +1,9 @@
+C:\Solutions C#\DVLD_DataAccess\bin\Debug\DVLD_DataAccess.exe.config
+C:\Solutions C#\DVLD_DataAccess\bin\Debug\DVLD_DataAccess.exe
+C:\Solutions C#\DVLD_DataAccess\bin\Debug\DVLD_DataAccess.pdb
+C:\Solutions C#\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.csproj.AssemblyReference.cache
+C:\Solutions C#\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.Properties.Resources.resources
+C:\Solutions C#\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.csproj.GenerateResource.cache
+C:\Solutions C#\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.csproj.CoreCompileInputs.cache
+C:\Solutions C#\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.exe
+C:\Solutions C#\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.pdb
